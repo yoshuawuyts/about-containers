@@ -23,7 +23,6 @@ function view (state, emit) {
   if (state.title !== TITLE) emit(state.events.DOMTITLECHANGE, TITLE)
 
   var urls = []
-  setTimeout(() => console.log(urls))
   var content = render(src)
   var refs = urls.map((url) => html`<li class="mb2"><a class="white" href="${url[0]}">${url[0]}</a></li>`)
   return html`
